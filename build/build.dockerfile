@@ -38,6 +38,9 @@ RUN COMPOSER_AUTH="{\"github-oauth\":{\"github.com\":\"${GITHUB_OAUTH_TOKEN}\"}}
 
 RUN sed -i '/return $app;/i $app->register(Biigle\\Modules\\Maia\\MaiaGpuServiceProvider::class);' bootstrap/app.php
 
+COPY config/queue.php /var/www/config/queue.php
+COPY config/remote-queue.php /var/www/config/remote-queue.php
+
 RUN php composer.phar dump-autoload -o && rm composer.phar
 
 COPY .env /var/www/.env
