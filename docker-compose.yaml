@@ -1,0 +1,43 @@
+version: '2.2'
+
+services:
+
+  app:
+    image: biigle/gpus-app-dist
+    user: ${USER_ID}:${GROUP_ID}
+    restart: always
+    depends_on:
+      - cache
+    volumes:
+      - ./storage:/var/www/storage
+
+  web:
+    image: biigle/gpus-web-dist
+    restart: always
+    depends_on:
+      - app
+    ports:
+      - 80:80
+
+  worker:
+    image: biigle/gpus-worker-dist
+    user: ${USER_ID}:${GROUP_ID}
+    restart: always
+    depends_on:
+      - cache
+    volumes_from:
+      - app
+    command: "php -d memory_limit=1G artisan queue:work --sleep=5 --tries=1 --timeout=0"
+
+  scheduler:
+    image: biigle/gpus-worker-dist
+    user: ${USER_ID}:${GROUP_ID}
+    restart: always
+    depends_on:
+      - cache
+    volumes_from:
+      - app
+    command: "/bin/sh -c 'trap exit SIGTERM; while sleep 60 & wait; do php -d memory_limit=1G artisan schedule:run >> /dev/null 2>&1; done'"
+
+  cache:
+    image: redis:3.0-alpine
