@@ -1,4 +1,4 @@
-# BIIGLE GPU server Distribution
+# BIIGLE GPU Server Distribution
 
 This is the production setup of the BIIGLE GPU server.
 
