@@ -1,4 +1,4 @@
-version: '2.2'
+version: '2.3'
 
 services:
 
@@ -22,6 +22,7 @@ services:
   worker:
     image: biigle/gpus-worker-dist
     user: ${USER_ID}:${GROUP_ID}
+    runtime: nvidia
     restart: always
     depends_on:
       - cache
