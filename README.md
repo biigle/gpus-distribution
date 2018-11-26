@@ -37,6 +37,8 @@ Perform these steps on the machine that should run the BIIGLE GPU server.
    - `REMOTE_QUEUE_ACCEPT_TOKENS` is the comma separated list of tokens that are accepted for authentication of incoming remote queue qobs. Set this to the `QUEUE_GPU_TOKEN` of your BIIGLE application.
    - `QUEUE_GPU_RESPONSE_URL` is the remote queue API endpoint of your BIIGLE application where the responses of the incoming jobs are submitted to. Set it to the API endpoint of your BIIGLE application.
    - `QUEUE_GPU_RESPONSE_TOKEN` is the token used to authenticate the responses. Set it to the `REMOTE_QUEUE_ACCEPT_TOKENS` of your BIIGLE application.
+   - `MAIA_MAX_WORKERS` is the number (or number-1) of available CPU cores that is used by the MAIA module.
+   - `MAIA_AVAILABLE_BYTES` is the estimated GPU memory size in bytes that is used by the MAIA module.
 
 4. Now build the Docker images for production: `cd build && ./build.sh`. You can build the images on a separate machine, too, and transfer them to the production machine using [`docker save`](https://docs.docker.com/engine/reference/commandline/save/) and [`docker load`](https://docs.docker.com/engine/reference/commandline/load/). `build.sh` also supports an optional argument to specify the version tag of the Docker containers to build (e.g. `v2.8.0`). Default is `latest`.
 
