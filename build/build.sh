@@ -11,7 +11,7 @@ VERSION=${1:-latest}
 docker build -f build.dockerfile -t biigle/gpus-build-dist \
     --build-arg TIMEZONE=${APP_TIMEZONE} \
     --build-arg GITHUB_OAUTH_TOKEN=${GITHUB_OAUTH_TOKEN} \
-    --build-arg MAIA_VERSION="dev-master" \
+    --build-arg MAIA_VERSION="^1.0" \
     .
 
 # Update the composer cache directory for much faster builds.
