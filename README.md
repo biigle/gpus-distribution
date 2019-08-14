@@ -1,6 +1,6 @@
 # BIIGLE GPU Server Distribution
 
-This is the production setup of the BIIGLE GPU server.
+This is the production setup of the BIIGLE GPU server. You can fork this repository to customize your own production instance.
 
 ## Installation
 
