@@ -1,6 +1,6 @@
 FROM biigle/gpus-build-dist AS intermediate
 
-FROM docker.pkg.github.com/biigle/gpus/app
+FROM docker.pkg.github.com/biigle/gpus/gpus-app
 MAINTAINER Martin Zurowietz <martin@cebitec.uni-bielefeld.de>
 
 COPY --from=intermediate /etc/localtime /etc/localtime

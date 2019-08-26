@@ -1,4 +1,4 @@
-FROM docker.pkg.github.com/biigle/gpus/app
+FROM docker.pkg.github.com/biigle/gpus/gpus-app
 MAINTAINER Martin Zurowietz <martin@cebitec.uni-bielefeld.de>
 
 # Configure the timezone.
