@@ -19,14 +19,6 @@ RUN php -r "copy('https://getcomposer.org/installer', 'composer-setup.php');" \
 ENV COMPOSER_NO_INTERACTION 1
 ENV COMPOSER_ALLOW_SUPERUSER 1
 
-# Add all these module repositories because they are dependencies of biigle/maia.
-RUN php composer.phar config repositories.projects vcs https://github.com/biigle/projects \
-    && php composer.phar config repositories.label-trees vcs https://github.com/biigle/label-trees \
-    && php composer.phar config repositories.volumes vcs https://github.com/biigle/volumes \
-    && php composer.phar config repositories.annotations vcs https://github.com/biigle/annotations \
-    && php composer.phar config repositories.largo vcs https://github.com/biigle/largo \
-    && php composer.phar config repositories.maia vcs https://github.com/biigle/maia
-
 # Include the Composer cache directory to speed up the build.
 COPY cache /root/.composer/cache
 
