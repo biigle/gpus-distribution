@@ -4,7 +4,7 @@ This is the production setup of the BIIGLE GPU server. You can fork this reposit
 
 ## Installation
 
-Perform these steps on the machine that should run the BIIGLE GPU server. Check out the wiki for an [example](https://github.com/biigle/gpus-distribution/wiki) of how to prepare a new machine for the installation of the GPU server. You also need to [configure Docker](https://help.github.com/en/github/managing-packages-with-github-packages/configuring-docker-for-use-with-github-packages#authenticating-to-github-packages) to authenticate to the GitHub package registry.
+Perform these steps on the machine that should run the BIIGLE GPU server. Check out the wiki for an [example](https://github.com/biigle/gpus-distribution/wiki/Example-installation) of how to prepare a new machine for the installation of the GPU server. You also need to [configure Docker](https://help.github.com/en/github/managing-packages-with-github-packages/configuring-docker-for-use-with-github-packages#authenticating-to-github-packages) to authenticate to the GitHub package registry.
 
 1. Create a user for the BIIGLE GPU server and find out the user and group ID:
    ```bash
