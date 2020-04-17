@@ -2,6 +2,8 @@
 
 This is the production setup of the BIIGLE GPU server. You can fork this repository to customize your own production instance.
 
+Head over to the [wiki](https://github.com/biigle/gpus-distribution/wiki/Example-setup) for detailed examples on how to set up BIIGLE and the BIIGLE GPU server.
+
 ## Installation
 
 Perform these steps on the machine that should run the BIIGLE GPU server. Check out the wiki for an [example](https://github.com/biigle/gpus-distribution/wiki/Example-installation) of how to prepare a new machine for the installation of the GPU server. You also need to [configure Docker](https://help.github.com/en/github/managing-packages-with-github-packages/configuring-docker-for-use-with-github-packages#authenticating-to-github-packages) to authenticate to the GitHub package registry.
