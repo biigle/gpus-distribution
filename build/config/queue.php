@@ -38,7 +38,7 @@ return [
             'driver' => 'redis',
             'connection' => env('QUEUE_REDIS_CONNECTION', 'default'),
             'queue' => 'default',
-            'retry_after' => 60,
+            'retry_after' => 86400, // 24h
         ],
 
         'gpu-response' => [
