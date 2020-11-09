@@ -1,5 +1,7 @@
 # BIIGLE GPU Server Distribution
 
+**:warning: The GPU server was abandoned in favor of a [simpler setup involving GPU workers and a central Redis cache](https://biigle-admin-documentation.readthedocs.io/gpu).**
+
 This is the production setup of the BIIGLE GPU server. You can fork this repository to customize your own production instance.
 
 Head over to the [wiki](https://github.com/biigle/gpus-distribution/wiki/Example-setup) for detailed examples on how to set up BIIGLE and the BIIGLE GPU server.
